@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:white">
+    <a-camera position="0 8 15"></a-camera>
+
+    <!--Assets-->
+    
+    <a-assets timeout="10000">
+
+        <a-asset-item id="cat" src="./Models/armored_cat/scene.gltf"></a-asset-item>
+        <a-asset-item id="pole" src="./Models/light_pole/scene.gltf"></a-asset-item>  
+        <a-asset-item id="women" src="./Models/realistic_women/scene.gltf"></a-asset-item> 
+        <a-asset-item id="road" src="./Models/snow_road_raw_scan_freebie/scene.gltf"></a-asset-item>
+        <a-asset-item id="bench" src="./Models/the_kungsara_bench/scene.gltf"></a-asset-item>
+        <img id="bg" src="./images/night-starry-sky-and-pink-clouds-sunrise-free-vector.jpg">
+
+      </a-assets>
+      <a-sky src="#bg"></a-sky>
+
+      <!--Lights-->
+
+      <a-entity light="type: point; castShadow: true; color: #e6ca14; intensity: 2.35" position="-5.92951 8.39487 1.29438">
+      </a-entity>
+
+      <a-entity light="type:ambient;"></a-entity>
+
+      <!--Objects-->
+
+      <!--Girl-->
+      <a-entity scale="0.003 0.003 0.003" gltf-model="#women" position="-2 0.4 3" shadow="cast:true;"></a-entity>
+
+      <!--Cat-->
+      <a-entity scale="0.003 0.003 0.003" gltf-model="#cat" position="-4 0.4 3" shadow="cast:true;"></a-entity>
+
+      <!--Bench-->
+      <a-entity scale="0.003 0.003 0.003" gltf-model="#bench" position="-2 0.4 5" shadow="cast:true;"></a-entity>
+
+      <!--Pole-->
+      <a-entity scale="0.003 0.003 0.003" gltf-model="#pole" position="2 0.4 3" shadow="cast:true;"></a-entity>
+
+      <!--Road-->
+      <a-entity scale="0.003 0.003 0.003" gltf-model="#road" position="0 0.4 0" shadow="cast:true;"></a-entity>
+  </a-scene>
+</body>
+
+</html>
